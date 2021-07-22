@@ -9,21 +9,12 @@
  * 
  */
 #include <iostream>
-#include <Calculator.h>
-using CALC::Calculator;
+#include "Input_phrase.h"
 
 int main(int argc, char *argv[])
 {
-	double x, y, result;
-	char oper; 
-	Calculator calc; 
-
-	while (true)
-	{
-		std::cin >> x >> oper >> y;
-		result = calc.Calculate(x, oper, y);
-		std::cout << "Result is: " << result << std::endl;
-	}
+	InputPhrase inpPhrase;
+	inpPhrase.listen_phrase();
 	return 0;
 	
 }

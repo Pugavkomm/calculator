@@ -6,7 +6,10 @@
 
 #ifndef CALC
 #define CALC
+#include <string>
 class Calculator {
+private:
+    int priority(char operation);
 public:
     /**
      * @brief 
@@ -16,7 +19,7 @@ public:
      * @param y is right operand
      * @return result = x oper y
      */
-    double Calculate(double x, char oper, double y);
+    double Calculate(std::string &phrase);
 
 };
 #endif
